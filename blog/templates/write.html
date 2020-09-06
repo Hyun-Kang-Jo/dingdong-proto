@@ -42,12 +42,17 @@
   </div>
 </nav>
 
-<div class = "container jumbotron">
-    <h1>{{blog_detail.title}}</h1>
-    <p>{{blog_detail.pub_date}}</p>
-    <p>{{blog_detail.body}}</p>
-    <a href="{%url 'home'%}">돌아가기</a>
-</div><!--이부분 이거 각 id에 맞는 키 페이지를 긁어온다는건 알겠는데.. 왜 url 페이지 뒤에 저렇게씀?? 양식?? -->
-<a href="{% url 'delete' blog_detail.id%}"><input type = "button" value ="삭제하기"></a>
-<a href="{% url 'update' blog_detail.id%}"><input type = "button" value ="수정하기"></a>
-</body>
+<br>
+<div class = "container">
+ <form action = "{%url 'send'%}">
+  <h4>제목 : <h4>
+  <input type = "text" name ="title">
+  <br>
+  <br>
+  <h4>본문 : </h4>
+  <textarea cols=40 rows=10 name="body"></textarea>
+  <br>
+  <br>
+  <input class ="btn btn-dark" type ="submit" value="제출하기">
+ </form>
+</div>
