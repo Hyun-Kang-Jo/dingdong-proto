@@ -8,7 +8,6 @@
 
 <body>
 
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -71,6 +70,11 @@
                 <br> 
                 </div>
                 <hr>
+                {% for portfolio in portfolios.all %}
+                	        <img class="card-img-top" src="{{ portfolio.image.url }}" alt=" Card image cap">
+	        <div class="card-body">
+	          <h4>{{ portfolio.title }}</h4>
+	          <p class="card-text">{{ portfolio.description }}</p>
                 <div class="box">
                 <br>
                     <p>회기동 동물약국 이용해보셨나요?</p><br>
@@ -78,6 +82,7 @@
                     <div class="type">동물약국</div>
                 <br>
                 </div>
+                {% endfor %}
                 <br>
                 <hr>
                 <div class="box">
