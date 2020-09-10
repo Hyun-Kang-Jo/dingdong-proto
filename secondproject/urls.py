@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import blog.views
+import portfolio.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('delete/<int:blog_id>/', blog.views.delete, name="delete"),
     path('update/<int:blog_id>/', blog.views.update, name="update"),
     path('updateSend/<int:blog_id>/', blog.views.updateSend, name ="updateSend"),
+    path('portfolio/', portfolio.views.portfolio, name="portfolio"),
 ]
